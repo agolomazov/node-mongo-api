@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "up-server": "nodemon -x node server/server.js"
+    "up-server": "nodemon -x node server/server.js",
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon -x npm run test"
   },
   "keywords": [],
   "author": "",

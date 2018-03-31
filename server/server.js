@@ -13,7 +13,7 @@ app.post('/todos', jsonParser, (req, res) => {
   });
 
   todo.save().then((doc) => {
-    res.status(201).send(doc);
+    res.send(doc);
   }, (err) => {
     res.status(400).send(err);
   });
@@ -25,3 +25,5 @@ app.listen(3000, (err) => {
     console.log('Server running!');
   }
 });
+
+module.exports = { app };
